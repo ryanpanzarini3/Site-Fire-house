@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FireHouse RPG - Onde o RPG pega fogo!</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        fire: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            200: '#fed7aa',
+                            300: '#fdba74',
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                            800: '#9a3412',
+                            900: '#7c2d12',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-black text-gray-100 font-rpg">
+    <!-- Navbar Component -->
+    <script src="components/navbar.js"></script>
+    <custom-navbar></custom-navbar>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center bg-gradient-to-b from-black to-gray-900 overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('imagens/FIRE\ HOUSE\ WALLPAPER.png');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/30"></div>
+        
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 fire-text-animation">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-fire-400 to-fire-600"></span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 text-fire-200">Onde o RPG pega fogo!</p>
+            
+            <div id="countdown" class="mb-8 p-4 bg-black bg-opacity-50 rounded-lg border border-fire-700">
+                <p class="text-fire-400 mb-2">PRÓXIMA LIVE EM:</p>
+                <div class="flex justify-center gap-4">
+                    <div class="countdown-item">
+                        <span id="days" class="text-3xl font-bold text-fire-500">00</span>
+                        <span class="text-sm">DIAS</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="hours" class="text-3xl font-bold text-fire-500">00</span>
+                        <span class="text-sm">HORAS</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="minutes" class="text-3xl font-bold text-fire-500">00</span>
+                        <span class="text-sm">MIN</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="seconds" class="text-3xl font-bold text-fire-500">00</span>
+                        <span class="text-sm">SEG</span>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="https://kick.com/firehouseclub" class="inline-block px-8 py-3 bg-fire-600 hover:bg-fire-700 text-white font-bold rounded-full transition-all transform hover:scale-105 shadow-lg shadow-fire-900/50">
+                <i data-feather="play" class="inline mr-2"></i> ASSISTA AO VIVO
+            </a>
+        </div>
+        
+        <div class="absolute bottom-10 left-0 right-0 text-center animate-bounce">
+            <a href="#about" class="text-fire-400 hover:text-fire-300">
+                <i data-feather="chevron-down" class="w-8 h-8"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center section-title">
+                <span class="text-fire-500">SOBRE A</span> FIREHOUSE
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 rounded-lg p-6 hover:shadow-lg hover:shadow-fire-500/20 transition-all">
+                    <div class="text-center mb-4">
+                        <div class="inline-block p-3 bg-fire-900 rounded-full">
+                            <i data-feather="users" class="w-8 h-8 text-fire-400"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center text-fire-400">Nossa História</h3>
+                    <p class="text-gray-300">A FireHouse nasceu da paixão por RPG e da amizade entre jogadores que queriam criar algo único. Desde 2018, nossas mesas queimam com histórias épicas e momentos inesquecíveis.</p>
+                </div>
+                
+                <div class="bg-gray-800 rounded-lg p-6 hover:shadow-lg hover:shadow-fire-500/20 transition-all">
+                    <div class="text-center mb-4">
+                        <div class="inline-block p-3 bg-fire-900 rounded-full">
+                            <i data-feather="target" class="w-8 h-8 text-fire-400"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center text-fire-400">Nossa Missão</h3>
+                    <p class="text-gray-300">Trazer entretenimento de qualidade, compartilhar nossa paixão por RPG e construir uma comunidade onde todos se sintam parte dessa aventura.</p>
+                </div>
+                
+                <div class="bg-gray-800 rounded-lg p-6 hover:shadow-lg hover:shadow-fire-500/20 transition-all">
+                    <div class="text-center mb-4">
+                        <div class="inline-block p-3 bg-fire-900 rounded-full">
+                            <i data-feather="award" class="w-8 h-8 text-fire-400"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center text-fire-400">Nossos Valores</h3>
+                    <p class="text-gray-300">Criatividade, diversão, inclusão e respeito são os pilares que mantêm nosso fogo aceso. Todo jogador é bem-vindo à nossa fogueira.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Members Section -->
+    <section class="py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center section-title">
+                <span class="text-fire-500">OS</span> JOGADORES
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Member 1 -->
+                <div class="member-card bg-gray-900 rounded-lg overflow-hidden hover:shadow-lg hover:shadow-fire-500/20 transition-all">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="imagens/Felipe.jpg" alt="Membro 1" class="w-full h-full object-cover transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-4">
+                            <h3 class="text-xl font-bold text-fire-300">Felipinho</h3>
+                            <p class="text-sm text-fire-200">Mestre dos bagos</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex items-center mb-2">
+                            <i data-feather="star" class="w-4 h-4 text-fire-400 mr-1"></i>
+                            <span class="text-sm text-gray-300">Classe mais usada: Bardo</span>
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <i data-feather="dice" class="w-4 h-4 text-fire-400 mr-1"></i>
+                            <span class="text-sm text-gray-300">Sistema preferido: D&D 5º Edição</span>
+                        </div>
+                        <p class="text-sm italic text-gray-400 mt-3">"Toda mesa merece um TPK eu que tenho paciência demais."</p>
+                    </div>
+                </div>
+                
+                <!-- Member 2 -->
+                <div class="member-card bg-gray-900 rounded-lg overflow-hidden hover:shadow-lg hover:shadow-fire-500/20 transition-all">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="imagens/Gabriel .jpg" alt="Membro 2" class="w-full h-full object-cover transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-4">
+                            <h3 class="text-xl font-bold text-fire-300">Gabriel</h3>
+                            <p class="text-sm text-fire-200">Fumante excessivo</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex items-center mb-2">
+                            <i data-feather="star" class="w-4 h-4 text-fire-400 mr-1"></i>
+                            <span class="text-sm text-gray-300">Classe preferida: Padre porradeiro</span>
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <i data-feather="dice" class="w-4 h-4 text-fire-400 mr-1"></i>
+                            <span class="text-sm text-gray-300">Sistema preferido: Star Wars</span>
+                        </div>
+                        <p class="text-sm italic text-gray-400 mt-3">"Minha missão é fumar todos os cigarros do mundo para que ninguém mais precise."</p>
+                    </div>
+                </div>
+
+                <div class="member-card bg-gray-900 rounded-lg overflow-hidden hover:shadow-lg hover:shadow-fire-500/20 transition-all">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="imagens/delega.jpg" alt="Membro 2" class="w-full h-full object-cover transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-4">
+                            <h3 class="text-xl font-bold text-fire-300">Delega</h3>
+                            <p class="text-sm text-fire-200">Eu não jogo</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex items-center mb-2">
+                            <i data-feather="star" class="w-4 h-4 text-fire-400 mr-1"></i>
+                            <span class="text-sm text-gray-300">Classe preferida: Gigante</span>
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <i data-feather="dice" class="w-4 h-4 text-fire-400 mr-1"></i>
+                            <span class="text-sm text-gray-300">Sistema preferido: Tormenta </span>
+                        </div>
+                        <p class="text-sm italic text-gray-400 mt-3">"Deus o livre meus alunos descobrirem que eu jogo RPG"</p>
+                    </div>
+                </div>
+                
+                <!-- Member 3 -->
+                <div class="member-card bg-gray-900 rounded-lg overflow-hidden hover:shadow-lg hover:shadow-fire-500/20 transition-all">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="imagens/Ryan .jpg" alt="Membro 3" class="w-full h-full object-cover transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-4">
+                            <h3 class="text-xl font-bold text-fire-300">Ryan</h3>
+                            <p class="text-sm text-fire-200">Eu vou, depende da minha mulher</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex items-center mb-2">
+                            <i data-feather="star" class="w-4 h-4 text-fire-400 mr-1"></i>
+                            <span class="text-sm text-gray-300">Classe preferida: Mago</span>
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <i data-feather="dice" class="w-4 h-4 text-fire-400 mr-1"></i>
+                            <span class="text-sm text-gray-300">Sistema preferido: Ordem Paranormal</span>
+                        </div>
+                        <p class="text-sm italic text-gray-400 mt-3">"Eu vou, depende da minha mulher"</p>
+                    </div>
+                </div>
+                <div class="member-card bg-gray-900 rounded-lg overflow-hidden hover:shadow-lg hover:shadow-fire-500/20 transition-all">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="imagens/halyson.png" alt="Membro 4" class="w-full h-full object-cover transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-4">
+                            <h3 class="text-xl font-bold text-fire-300">Halyson</h3>
+                            <p class="text-sm text-fire-200">Como eu entro no discord?</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex items-center mb-2">
+                            <i data-feather="star" class="w-4 h-4 text-fire-400 mr-1"></i>
+                            <span class="text-sm text-gray-300">Classe preferida: Mago (Sempre uma mulher)</span>
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <i data-feather="dice" class="w-4 h-4 text-fire-400 mr-1"></i>
+                            <span class="text-sm text-gray-300">Sistema preferido: Ordem Paranormal</span>
+                        </div>
+                        <p class="text-sm italic text-gray-400 mt-3">"Eu já entro piazada, tenho reunião"</p>
+                    </div>
+                </div>
+                
+                <!-- Member 4 -->
+                <div class="member-card bg-gray-900 rounded-lg overflow-hidden hover:shadow-lg hover:shadow-fire-500/20 transition-all">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="imagens/Imagem do WhatsApp de 2025-10-29 à(s) 17.12.27_aa488431.jpg" alt="Membro 4" class="w-full h-full object-cover transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-4">
+                            <h3 class="text-xl font-bold text-fire-300">Otávio</h3>
+                            <p class="text-sm text-fire-200">Quebrar sistema? Eu?</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex items-center mb-2">
+                            <i data-feather="star" class="w-4 h-4 text-fire-400 mr-1"></i>
+                            <span class="text-sm text-gray-300">Classe preferida:  Ocultista no Ordem Paranormal e Druida no D&D</span>
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <i data-feather="dice" class="w-4 h-4 text-fire-400 mr-1"></i>
+                            <span class="text-sm text-gray-300">Sistema preferido: D&D 5ª Edição</span>
+                        </div>
+                        <p class="text-sm italic text-gray-400 mt-3">"O que ta no livro é fácil, a magia está em juntar tudo e quebrar"</p>
+                    </div>
+                </div>
+
+                <div class="member-card bg-gray-900 rounded-lg overflow-hidden hover:shadow-lg hover:shadow-fire-500/20 transition-all">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="imagens/Diogo.jpg" alt="Membro 4" class="w-full h-full object-cover transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-4">
+                            <h3 class="text-xl font-bold text-fire-300">Diogo</h3>
+                            <p class="text-sm text-fire-200">Quebrar sistema? Eu?</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex items-center mb-2">
+                            <i data-feather="star" class="w-4 h-4 text-fire-400 mr-1"></i>
+                            <span class="text-sm text-gray-300">Classe preferida:  Ocultista no Ordem Paranormal e Druida no D&D</span>
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <i data-feather="dice" class="w-4 h-4 text-fire-400 mr-1"></i>
+                            <span class="text-sm text-gray-300">Sistema preferido: D&D 5ª Edição</span>
+                        </div>
+                        <p class="text-sm italic text-gray-400 mt-3">"O que ta no livro é fácil, a magia está em juntar tudo e quebrar"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Systems Section -->
+    <section id="systems" class="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center section-title">
+                <span class="text-fire-500">SISTEMAS</span> QUE JOGAMOS
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- D&D Card -->
+                <div class="system-card group relative overflow-hidden rounded-lg h-64 shadow-lg">
+                    <img src="https://static.photos/fantasy/640x360/1" alt="Dungeons & Dragons" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-6">
+                        <h3 class="text-2xl font-bold text-fire-300 mb-2">Dungeons & Dragons</h3>
+                        <p class="text-gray-300 mb-4">O clássico dos clássicos, onde heróis enfrentam dragões e exploram masmorras.</p>
+                        <a href="https://rpgeboardgames.com/rpgdemesa/guia-de-iniciante-regras-basicas-dd-5e-comece-a-jogar-hoje/#:~:text=Para%20come%C3%A7ar%20sua%20jornada%2C%20voc%C3%AA%20precisa%20entender%20a,elementos%20s%C3%A3o%20descritos%20na%20sua%20ficha%20de%20personagem." class="inline-flex items-center text-fire-400 hover:text-fire-300">
+                            Saiba mais <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+                    <div class="absolute top-4 right-4 bg-fire-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+                        FANTASIA
+                    </div>
+                </div>
+                
+                <!-- Tormenta Card -->
+                <div class="system-card group relative overflow-hidden rounded-lg h-64 shadow-lg">
+                    <img src="https://static.photos/fantasy/640x360/2" alt="Tormenta" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-6">
+                        <h3 class="text-2xl font-bold text-fire-300 mb-2">Tormenta</h3>
+                        <p class="text-gray-300 mb-4">O sistema brasileiro de heróis épicos que desafiam os deuses e o destino.</p>
+                        <a href="#tormenta" class="inline-flex items-center text-fire-400 hover:text-fire-300">
+                            Saiba mais <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+                    <div class="absolute top-4 right-4 bg-fire-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+                        NACIONAL
+                    </div>
+                </div>
+                
+                <!-- Ordem Card -->
+                <div class="system-card group relative overflow-hidden rounded-lg h-64 shadow-lg">
+                    <img src="https://static.photos/dark/640x360/1" alt="Ordem Paranormal" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-6">
+                        <h3 class="text-2xl font-bold text-fire-300 mb-2">Ordem Paranormal</h3>
+                        <p class="text-gray-300 mb-4">Investigadores enfrentam mistérios sobrenaturais em um mundo moderno assombrado.</p>
+                        <a href="#ordem" class="inline-flex items-center text-fire-400 hover:text-fire-300">
+                            Saiba mais <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+                    <div class="absolute top-4 right-4 bg-fire-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+                        TERROR
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Section -->
+    <section id="live" class="py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center section-title">
+                <span class="text-fire-500">PRÓXIMA</span> LIVE
+            </h2>
+            
+            <div class="max-w-4xl mx-auto bg-gray-900 rounded-lg overflow-hidden shadow-xl shadow-fire-900/20">
+                <div class="md:flex">
+                    <div class="md:w-1/2 relative">
+                        <img src="imagens/c398c7b4-3a28-4c4a-a825-0a14f752fe22.png" alt="Próxima Live" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-fire-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+                            AO VIVO TODA SEXTA
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-8">
+                        <h3 class="text-2xl font-bold text-fire-400 mb-4">Tormenta: A Espada dos Céus</h3>
+                        <p class="text-gray-300 mb-6">Nossa campanha semanal de Tormenta 20, onde um grupo de heróis busca a lendária Espada dos Céus para deter o avanço da Tormenta sobre Arton.</p>
+                        
+                        <div class="mb-6">
+                            <p class="text-fire-300 font-bold mb-2">PRÓXIMO EPISÓDIO:</p>
+                            <p class="text-xl text-white">Ep. 24 - O Templo Esquecido</p>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm">Aventura</span>
+                            <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm">Fantasia</span>
+                            <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm">Tormenta 20</span>
+                        </div>
+                        
+                        <a href="#" class="inline-block px-6 py-2 bg-fire-600 hover:bg-fire-700 text-white font-bold rounded-full transition-all">
+                            <i data-feather="calendar" class="inline mr-2"></i> ASSISTIR AO VIVO
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dice Roller Section -->
+    <section class="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center section-title">
+                <span class="text-fire-500">ROLADOR</span> DE DADOS
+            </h2>
+            
+            <div class="max-w-md mx-auto bg-gray-800 rounded-lg p-8 shadow-xl shadow-fire-900/20">
+                <div class="text-center mb-8">
+                    <div class="inline-block p-4 bg-gray-900 rounded-full border-2 border-fire-700">
+                        <i data-feather="dice" class="w-10 h-10 text-fire-400"></i>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <label for="dice-expression" class="block text-gray-300 mb-2">Expressão:</label>
+                    <div class="flex">
+                        <input type="text" id="dice-expression" placeholder="Ex: 2d20+5" class="flex-grow px-4 py-2 bg-gray-700 text-white rounded-l-lg focus:outline-none focus:ring-2 focus:ring-fire-500">
+                        <button id="roll-button" class="px-4 py-2 bg-fire-600 text-white font-bold rounded-r-lg hover:bg-fire-700 transition-colors">
+                            ROLAR
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <label class="block text-gray-300 mb-2">Resultado:</label>
+                    <div id="dice-result" class="p-4 bg-gray-900 rounded-lg text-center text-2xl font-bold text-fire-400 min-h-16 flex items-center justify-center">
+                        <span class="text-gray-500">Aguardando rolagem...</span>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-4 gap-2 mb-6">
+                    <button class="quick-dice bg-gray-700 hover:bg-fire-600 text-white py-2 rounded transition-colors" data-dice="d4">d4</button>
+                    <button class="quick-dice bg-gray-700 hover:bg-fire-600 text-white py-2 rounded transition-colors" data-dice="d6">d6</button>
+                    <button class="quick-dice bg-gray-700 hover:bg-fire-600 text-white py-2 rounded transition-colors" data-dice="d8">d8</button>
+                    <button class="quick-dice bg-gray-700 hover:bg-fire-600 text-white py-2 rounded transition-colors" data-dice="d10">d10</button>
+                    <button class="quick-dice bg-gray-700 hover:bg-fire-600 text-white py-2 rounded transition-colors" data-dice="d12">d12</button>
+                    <button class="quick-dice bg-gray-700 hover:bg-fire-600 text-white py-2 rounded transition-colors" data-dice="d20">d20</button>
+                    <button class="quick-dice bg-gray-700 hover:bg-fire-600 text-white py-2 rounded transition-colors" data-dice="d100">d100</button>
+                    <button class="quick-dice bg-gray-700 hover:bg-fire-600 text-white py-2 rounded transition-colors" data-dice="2d6">2d6</button>
+                </div>
+                
+                <div class="text-center text-gray-400 text-sm">
+                    <p>Experimente expressões como "3d6+2" ou "2d20k1" (keep highest)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <script src="components/footer.js"></script>
+    <custom-footer></custom-footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+</body>
+</html>

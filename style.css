@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --fire-50: #fff7ed;
+    --fire-100: #ffedd5;
+    --fire-200: #fed7aa;
+    --fire-300: #fdba74;
+    --fire-400: #fb923c;
+    --fire-500: #f97316;
+    --fire-600: #ea580c;
+    --fire-700: #c2410c;
+    --fire-800: #9a3412;
+    --fire-900: #7c2d12;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.font-rpg {
+    font-family: 'MedievalSharp', cursive;
+}
+
+/* Fire Text Animation */
+.fire-text-animation {
+    position: relative;
+    display: inline-block;
+}
+
+.fire-text-animation::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--fire-400), var(--fire-600));
+    border-radius: 3px;
+    animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* Section Titles */
+.section-title {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--fire-400), var(--fire-600));
+    border-radius: 3px;
+}
+
+/* Member Card Hover Effect */
+.member-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Dice Roller Animation */
+.dice-roll-animation {
+    animation: roll 0.5s ease-out;
+}
+
+@keyframes roll {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.2);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+/* Particle Background */
+.particle-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.1;
+}
