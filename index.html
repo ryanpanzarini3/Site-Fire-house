@@ -38,7 +38,13 @@
 
     <!-- Hero Section -->
     <section class="relative h-screen flex items-center justify-center bg-gradient-to-b from-black to-gray-900 overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('imagens/FIRE\ HOUSE\ WALLPAPER.png');"></div>
+       <div class="absolute inset-0 overflow-hidden">
+  <video autoplay loop muted playsinline class="absolute w-full h-full object-cover">
+    <source src="imagens/BACKGROUND.mp4" type="video/mp4">
+  </video>
+</div>
+
+<!-- Gradiente por cima -->
 <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/30"></div>
         
         <div class="relative z-10 text-center px-4">
@@ -72,8 +78,25 @@
             <a href="https://kick.com/firehouseclub" class="inline-block px-8 py-3 bg-fire-600 hover:bg-fire-700 text-white font-bold rounded-full transition-all transform hover:scale-105 shadow-lg shadow-fire-900/50">
                 <i data-feather="play" class="inline mr-2"></i> ASSISTA AO VIVO
             </a>
-        </div>
-        
+
+
+            
+           <div class="mt-6 flex justify-center gap-6 items-center">
+                <a href="https://www.instagram.com/firehouseclub042" target="_blank" rel="noopener" aria-label="Instagram" class="flex items-center justify-center p-2 rounded-full hover:bg-fire-900/20 transition transform hover:scale-110">
+                    <!-- Instagram SVG -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-fire-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.5A4.5 4.5 0 1 0 16.5 13 4.5 4.5 0 0 0 12 8.5zm6.2-2.7a1.05 1.05 0 1 0 1.05 1.05A1.05 1.05 0 0 0 18.2 5.8zM12 10.5A1.5 1.5 0 1 1 10.5 12 1.5 1.5 0 0 1 12 10.5z"/>
+                    </svg>
+                </a>
+
+                <a href="https://www.youtube.com/@FireHouseClubPR" target="_blank" rel="noopener" aria-label="YouTube" class="flex items-center justify-center p-2 rounded-full hover:bg-fire-900/20 transition transform hover:scale-110">
+                    <!-- YouTube SVG -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-fire-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M23.498 6.186a2.99 2.99 0 0 0-2.105-2.111C19.55 3.5 12 3.5 12 3.5s-7.55 0-9.393.575A2.99 2.99 0 0 0 .5 6.186 31.27 31.27 0 0 0 0 12a31.27 31.27 0 0 0 .5 5.814 2.99 2.99 0 0 0 2.107 2.111C4.45 20.5 12 20.5 12 20.5s7.55 0 9.393-.575a2.99 2.99 0 0 0 2.105-2.111A31.27 31.27 0 0 0 24 12a31.27 31.27 0 0 0-.502-5.814zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/>
+                    </svg>
+                </a>
+            </div>
+
         <div class="absolute bottom-10 left-0 right-0 text-center animate-bounce">
             <a href="#about" class="text-fire-400 hover:text-fire-300">
                 <i data-feather="chevron-down" class="w-8 h-8"></i>
