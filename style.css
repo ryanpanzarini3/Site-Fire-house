@@ -135,3 +135,33 @@ section {
     background-color: rgba(0, 0, 0, 0.8) !important;
     backdrop-filter: blur(4px);
 }
+
+.highlight-card {
+    position: relative;
+    background: rgba(10,10,10,0.6);
+    backdrop-filter: blur(6px);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.highlight-card:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 12px 30px rgba(234,88,12,0.12);
+}
+
+/* Comentários dentro do destaque */
+.highlight-card ul { padding-left: 1rem; margin: 0; }
+.highlight-card li { list-style: disc; margin-left: 0.5rem; }
+
+/* Ajustes responsivos (opcional) */
+@media (max-width: 1024px) {
+    .highlight-card .aspect-video { height: auto; }
+}
+
+.video-controls button {
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.04);
+}
+.video-controls button:hover {
+  transform: translateY(-2px);
+  transition: transform .15s ease;
+}
+
