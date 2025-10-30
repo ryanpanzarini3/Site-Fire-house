@@ -32,6 +32,18 @@
     </script>
 </head>
 <body class="bg-black text-gray-100 font-rpg">
+    <div class="fixed inset-0 pointer-events-none z-0 opacity-40">
+        <video autoplay loop muted playsinline class="absolute w-full h-full object-cover">
+            <source src="imagens/BACKGROUND 02.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Gradiente por cima do fogo -->
+    <div class="fixed inset-0 pointer-events-none z-0 bg-gradient-to-b from-black/80 via-black/50 to-black/80"></div>
+
+    <!-- Resto do conteúdo com z-index maior -->
+    <div class="relative z-10">
+        
     <!-- Navbar Component -->
     <script src="components/navbar.js"></script>
     <custom-navbar></custom-navbar>
@@ -40,7 +52,7 @@
     <section class="relative h-screen flex items-center justify-center bg-gradient-to-b from-black to-gray-900 overflow-hidden">
        <div class="absolute inset-0 overflow-hidden">
   <video autoplay loop muted playsinline class="absolute w-full h-full object-cover">
-    <source src="imagens/BACKGROUND-2.mp4" type="video/mp4">
+    <source src="imagens/BACKGROUND 02.mp4" type="video/mp4">
   </video>
 </div>
 
@@ -119,7 +131,9 @@
                         </div>
                     </div>
                     <h3 class="text-xl font-bold mb-3 text-center text-fire-400">Nossa História</h3>
-                    <p class="text-gray-300">A FireHouse nasceu da paixão por RPG e da amizade entre jogadores que queriam criar algo único. Desde 2018, nossas mesas queimam com histórias épicas e momentos inesquecíveis.</p>
+                    <p class="text-gray-300">Nós somos o Fire House Club, um grupo de amigos do interior do Paraná que resolveu transformar as nossas jogatinas de RPG cheias de besteiras, risadas, cervejas, cigarros e decisões ruins, em live.
+Aqui a gente compartilha as mesmas merdas que fazia jogando off, mas agora com testemunha.
+Seja bem-vindo ao boteco do caos, onde o dado rola torto e a cerveja nunca acaba! 🎲🍺🔥.</p>
                 </div>
                 
                 <div class="bg-gray-800 rounded-lg p-6 hover:shadow-lg hover:shadow-fire-500/20 transition-all">
@@ -129,7 +143,7 @@
                         </div>
                     </div>
                     <h3 class="text-xl font-bold mb-3 text-center text-fire-400">Nossa Missão</h3>
-                    <p class="text-gray-300">Trazer entretenimento de qualidade, compartilhar nossa paixão por RPG e construir uma comunidade onde todos se sintam parte dessa aventura.</p>
+                    <p class="text-gray-300">Espalhar o caos, a risada e o amor pelo RPG! Nosso propósito é transformar cada jogatina em uma história absurda, cada erro crítico em motivo de brinde e cada sessão em um lembrete de que jogar é se divertir — mesmo (ou principalmente) quando tudo dá errado. Queremos que todo mundo sinta que tá na mesa com a gente: rindo, errando e brindando ao improviso. 🎲🍻</p>
                 </div>
                 
                 <div class="bg-gray-800 rounded-lg p-6 hover:shadow-lg hover:shadow-fire-500/20 transition-all">
@@ -139,7 +153,7 @@
                         </div>
                     </div>
                     <h3 class="text-xl font-bold mb-3 text-center text-fire-400">Nossos Valores</h3>
-                    <p class="text-gray-300">Criatividade, diversão, inclusão e respeito são os pilares que mantêm nosso fogo aceso. Todo jogador é bem-vindo à nossa fogueira.</p>
+                    <p class="text-gray-300">o Fire House Club, acreditamos que o verdadeiro espírito do RPG está no caos, na amizade e na risada. Somos um grupo de amigos que valoriza a bagunça criativa, o improviso e a liberdade de jogar do nosso jeito — sem filtro, sem pose, só diversão. Aqui o dado rola torto, a cerveja nunca acaba e cada erro vira história. Nosso boteco é aberto pra quem quiser entrar, rir, jogar e viver o caos com a gente 🎲🍺🔥.</p>
                 </div>
             </div>
         </div>
@@ -201,11 +215,11 @@
 
                 <div class="member-card bg-gray-900 rounded-lg overflow-hidden hover:shadow-lg hover:shadow-fire-500/20 transition-all">
                     <div class="relative h-64 overflow-hidden">
-                        <img src="imagens/delega.jpg" alt="Membro 2" class="w-full h-full object-cover transition-transform duration-500">
+                        <img src="imagens/caters_monkey_snapper_03.webp" alt="Membro 2" class="w-full h-full object-cover transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70"></div>
                         <div class="absolute bottom-0 left-0 p-4">
                             <h3 class="text-xl font-bold text-fire-300">Delega</h3>
-                            <p class="text-sm text-fire-200">Eu não jogo</p>
+                            <p class="text-sm text-fire-200">Deus o livre descobrirem que eu jogo RPG</p>
                         </div>
                     </div>
                     <div class="p-4">
@@ -217,7 +231,7 @@
                             <i data-feather="dice" class="w-4 h-4 text-fire-400 mr-1"></i>
                             <span class="text-sm text-gray-300">Sistema preferido: Tormenta </span>
                         </div>
-                        <p class="text-sm italic text-gray-400 mt-3">"Deus o livre meus alunos descobrirem que eu jogo RPG"</p>
+                        <p class="text-sm italic text-gray-400 mt-3">"Se dá pra trocar soco não tem porque correr"</p>
                     </div>
                 </div>
                 
@@ -240,12 +254,12 @@
                             <i data-feather="dice" class="w-4 h-4 text-fire-400 mr-1"></i>
                             <span class="text-sm text-gray-300">Sistema preferido: Ordem Paranormal</span>
                         </div>
-                        <p class="text-sm italic text-gray-400 mt-3">"Eu vou, depende da minha mulher"</p>
+                        <p class="text-sm italic text-gray-400 mt-3">"E se eu colocar fogo aqui nesse barraco com nós dentro?"</p>
                     </div>
                 </div>
                 <div class="member-card bg-gray-900 rounded-lg overflow-hidden hover:shadow-lg hover:shadow-fire-500/20 transition-all">
                     <div class="relative h-64 overflow-hidden">
-                        <img src="imagens/halyson.png" alt="Membro 4" class="w-full h-full object-cover transition-transform duration-500">
+                        <img src="imagens/b0fa90ed-b523-47b0-b2f0-6d76e065fd83.jpg" alt="Membro 4" class="w-full h-full object-cover transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70"></div>
                         <div class="absolute bottom-0 left-0 p-4">
                             <h3 class="text-xl font-bold text-fire-300">Halyson</h3>
@@ -255,13 +269,13 @@
                     <div class="p-4">
                         <div class="flex items-center mb-2">
                             <i data-feather="star" class="w-4 h-4 text-fire-400 mr-1"></i>
-                            <span class="text-sm text-gray-300">Classe preferida: Mago (Sempre uma mulher)</span>
+                            <span class="text-sm text-gray-300">Classe preferida: Ocultista</span>
                         </div>
                         <div class="flex items-center mb-2">
                             <i data-feather="dice" class="w-4 h-4 text-fire-400 mr-1"></i>
                             <span class="text-sm text-gray-300">Sistema preferido: Ordem Paranormal</span>
                         </div>
-                        <p class="text-sm italic text-gray-400 mt-3">"Eu já entro piazada, tenho reunião"</p>
+                        <p class="text-sm italic text-gray-400 mt-3">"salvar pessoas, caçar coisas, o negócio da família"</p>
                     </div>
                 </div>
                 
@@ -294,33 +308,35 @@
                         <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70"></div>
                         <div class="absolute bottom-0 left-0 p-4">
                             <h3 class="text-xl font-bold text-fire-300">Diogo</h3>
-                            <p class="text-sm text-fire-200">Quebrar sistema? Eu?</p>
+                            <p class="text-sm text-fire-200">Me alcance mais uma cerveja</p>
                         </div>
                     </div>
                     <div class="p-4">
                         <div class="flex items-center mb-2">
                             <i data-feather="star" class="w-4 h-4 text-fire-400 mr-1"></i>
-                            <span class="text-sm text-gray-300">Classe preferida:  Ocultista no Ordem Paranormal e Druida no D&D</span>
+                            <span class="text-sm text-gray-300">Classe preferida: Paladino</span>
                         </div>
                         <div class="flex items-center mb-2">
                             <i data-feather="dice" class="w-4 h-4 text-fire-400 mr-1"></i>
                             <span class="text-sm text-gray-300">Sistema preferido: D&D 5ª Edição</span>
                         </div>
-                        <p class="text-sm italic text-gray-400 mt-3">"O que ta no livro é fácil, a magia está em juntar tudo e quebrar"</p>
+                        <p class="text-sm italic text-gray-400 mt-3">"Se existir uma forma de eu acabar com isso rápido, que seja"</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    
+
     <!-- Systems Section -->
-    <section id="systems" class="py-20 bg-gradient-to-b from-black to-gray-900">
+    <section id="systems" class="py-20 bg-gradient-to-b from-black">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center section-title">
                 <span class="text-fire-500">SISTEMAS</span> QUE JOGAMOS
             </h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 gray-800">
                 <!-- D&D Card -->
                 <div class="system-card group relative overflow-hidden rounded-lg h-64 shadow-lg">
                     <img src="https://static.photos/fantasy/640x360/1" alt="Dungeons & Dragons" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
@@ -372,6 +388,7 @@
         </div>
     </section>
 
+    
     <!-- Live Section -->
     <section id="live" class="py-20 bg-black">
         <div class="container mx-auto px-4">
@@ -410,6 +427,53 @@
             </div>
         </div>
     </section>
+
+    <section id="systems" class="py-20 bg-gradient-to-b from-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center section-title">
+                <span class="text-fire-500">SIGA</span> A FIRE HOUSE
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- YouTube Card -->
+                <a href="https://youtube.com/@firehouseclub" class="social-card bg-black/50 rounded-lg p-6 text-center transform hover:scale-105 transition-all border border-fire-700/30 hover:border-fire-500">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-fire-600/20 flex items-center justify-center">
+                        <i data-feather="youtube" class="w-8 h-8 text-fire-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-fire-400">YouTube</h3>
+                    <p class="text-fire-200 text-sm">Assista nossas aventuras completas</p>
+                </a>
+
+                <!-- Instagram Card -->
+                <a href="https://instagram.com/firehouseclub" class="social-card bg-black/50 rounded-lg p-6 text-center transform hover:scale-105 transition-all border border-fire-700/30 hover:border-fire-500">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-fire-600/20 flex items-center justify-center">
+                        <i data-feather="instagram" class="w-8 h-8 text-fire-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-fire-400">Instagram</h3>
+                    <p class="text-fire-200 text-sm">Fique por dentro das novidades</p>
+                </a>
+
+                <!-- Kick Card -->
+                <a href="https://kick.com/firehouseclub" class="social-card bg-black/50 rounded-lg p-6 text-center transform hover:scale-105 transition-all border border-fire-700/30 hover:border-fire-500">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-fire-600/20 flex items-center justify-center">
+                        <i data-feather="tv" class="w-8 h-8 text-fire-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-fire-400">Kick</h3>
+                    <p class="text-fire-200 text-sm">Lives toda sexta às 20h</p>
+                </a>
+
+                <!-- Twitch Card -->
+                <a href="https://twitch.tv/firehouseclub" class="social-card bg-black/50 rounded-lg p-6 text-center transform hover:scale-105 transition-all border border-fire-700/30 hover:border-fire-500">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-fire-600/20 flex items-center justify-center">
+                        <i data-feather="twitch" class="w-8 h-8 text-fire-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-fire-400">Twitch</h3>
+                    <p class="text-fire-200 text-sm">Lives especiais e eventos</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Dice Roller Section -->
     <section class="py-20 bg-gradient-to-b from-gray-900 to-black">
