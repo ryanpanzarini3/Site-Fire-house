@@ -160,3 +160,53 @@ function createParticleBackground() {
     `;
     document.head.appendChild(style);
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const vid = document.getElementById('highlight-video');
+  const btnSound = document.getElementById('toggle-sound');
+  const btnPlay = document.getElementById('toggle-play');
+
+  if (!vid) return;
+
+  // Atualiza texto do botão conforme estado
+  const updateButtons = () => {
+    btnSound.textContent = vid.muted ? 'Som' : 'Sem som';
+    btnPlay.textContent = vid.paused ? 'Play' : 'Pause';
+  };
+
+  // Toggle som — exige interação do usuário, por isso botão
+  btnSound?.addEventListener('click', async (e) => {
+    try {
+      if (vid.muted) {
+        vid.muted = false;
+        // tentar tocar (alguns navegadores exigem play() após unmute)
+        await vid.play().catch(() => {});
+      } else {
+        vid.muted = true;
+      }
+    } catch (err) {
+      console.warn('Não foi possível alternar som:', err);
+    }
+    updateButtons();
+  });
+
+  // Play / Pause toggle
+  btnPlay?.addEventListener('click', () => {
+    if (vid.paused) {
+      vid.play().catch(() => {});
+    } else {
+      vid.pause();
+    }
+    updateButtons();
+  });
+
+  // Clique sobre o vídeo também alterna play/pause (opcional)
+  vid.addEventListener('click', () => {
+    if (vid.paused) vid.play().catch(() => {});
+    else vid.pause();
+    updateButtons();
+  });
+
+  updateButtons();
+});
+
