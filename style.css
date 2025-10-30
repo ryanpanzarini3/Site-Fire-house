@@ -99,3 +99,39 @@ body {
     z-index: 0;
     opacity: 0.1;
 }
+
+.social-card {
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+}
+
+.social-card:hover {
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 20px rgba(234, 88, 12, 0.3);
+}
+
+.social-card:hover i {
+    transform: scale(1.2);
+}
+
+.social-card i {
+    transition: transform 0.3s ease;
+}
+
+.fire-overlay {
+    mix-blend-mode: screen;
+    pointer-events: none;
+}
+
+/* Ajuste para todas as seções terem fundo semi-transparente */
+section {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    backdrop-filter: blur(2px);
+}
+
+/* Cards e elementos com fundo mais escuro */
+.bg-gray-800, .bg-gray-900, .bg-black {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(4px);
+}
