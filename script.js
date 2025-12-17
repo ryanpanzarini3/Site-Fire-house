@@ -1,28 +1,28 @@
-// Countdown to next Friday 8PM
 function updateCountdown() {
     const now = new Date();
     let nextFriday = new Date();
-    
-    // Set to next Friday
-    nextFriday.setDate(now.getDate() + (5 - now.getDay() + 7) % 7);
+
+    // Calcula a próxima sexta
+    const daysUntilFriday = (5 - now.getDay() + 7) % 7;
+    nextFriday.setDate(now.getDate() + daysUntilFriday);
+
+    // 👉 PULA essa sexta e vai para a outra
+    nextFriday.setDate(nextFriday.getDate() + 7);
+
+    // Horário do evento
     nextFriday.setHours(20, 0, 0, 0);
-    
-    // If it's already Friday after 8PM, set to next week
-    if (now.getDay() === 5 && now.getHours() >= 20) {
-        nextFriday.setDate(nextFriday.getDate() + 7);
-    }
-    
+
     const diff = nextFriday - now;
-    
+
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
     const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-    
-    document.getElementById('days').textContent = days.toString().padStart(2, '0');
-    document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-    document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-    document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+
+    document.getElementById('days').textContent = String(days).padStart(2, '0');
+    document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+    document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+    document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
 }
 
 // Dice Roller Functionality
@@ -209,4 +209,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   updateButtons();
 });
+
 
