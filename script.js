@@ -1,3 +1,51 @@
+// Lógica do botão de instalar PWA
+let deferredPrompt = null;
+const showInstallButton = () => {
+    const container = document.getElementById('pwa-install-container');
+    if (container) container.style.display = 'block';
+};
+const hideInstallButton = () => {
+    const container = document.getElementById('pwa-install-container');
+    if (container) container.style.display = 'none';
+};
+
+window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    showInstallButton();
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+    const installBtn = document.getElementById('pwa-install-btn');
+    if (installBtn) {
+        installBtn.addEventListener('click', async () => {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+                if (outcome === 'accepted') {
+                    hideInstallButton();
+                }
+                deferredPrompt = null;
+            } else {
+                // Fallback: instrução para instalar manualmente
+                alert('Para instalar, use o menu do navegador: "Adicionar à tela inicial" ou "Install app".');
+            }
+        });
+    }
+
+    // Fallback: se o evento não disparar, mostrar botão em navegadores suportados
+    setTimeout(() => {
+        if (!deferredPrompt && window.matchMedia('(display-mode: browser)').matches) {
+            showInstallButton();
+        }
+    }, 3000);
+});
+// PWA: Registrar o service worker
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('service-worker.js');
+    });
+}
 function updateCountdown() {
     const now = new Date();
     let nextFriday = new Date();
