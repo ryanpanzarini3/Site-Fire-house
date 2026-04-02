@@ -258,4 +258,165 @@ document.addEventListener('DOMContentLoaded', () => {
   updateButtons();
 });
 
+// ===========================
+// CAMPAIGN SECTION LOGIC
+// ===========================
+
+// Dados dos personagens da campanha
+const campaignCharacters = [
+  {
+    id: 1,
+    name: 'Marco',
+    class: 'Guerreiro',
+    race: 'Humano',
+    description: 'Um guerreiro valente e determinado, conhecido por sua coragem em batalha.',
+    portrait: 'imagens/Marco.jpeg',
+    attributes: {
+      str: 18,
+      dex: 12,
+      con: 16,
+      int: 10,
+      wis: 13,
+      cha: 14
+    },
+    equipment: ['Espada Longa', 'Escudo de Aço', 'Armadura de Placas', 'Capacete de Guerra'],
+    skills: ['Combat', 'Intimidação', 'Atletismo', 'Percepção']
+  },
+  {
+    id: 2,
+    name: 'Brida',
+    class: 'Ladina',
+    race: 'Valforde',
+    description: 'Uma gatuna astuta e ágil, especialista em furtos e furtividade.',
+    portrait: 'imagens/WhatsApp Image 2026-04-01 at 18.38.13.jpeg',
+    attributes: {
+      str: 10,
+      dex: 18,
+      con: 12,
+      int: 14,
+      wis: 11,
+      cha: 15
+    },
+    equipment: ['Adagas Gêmeas', 'Capa de Invisibilidade', 'Kit de Roubo', 'Veneno'],
+    skills: ['Furtividade', 'Prestidigitação', 'Acrobacia', 'Percepção']
+  },
+  {
+    id: 3,
+    name: 'Geraldo',
+    class: 'Orc - Bárbaro',
+    race: 'Orc',
+    description: 'Um bárbaro feroz e poderoso, com força bruta incomparável.',
+    portrait: 'imagens/Geraldo.jpeg',
+    attributes: {
+      str: 20,
+      dex: 10,
+      con: 18,
+      int: 8,
+      wis: 12,
+      cha: 11
+    },
+    equipment: ['Machado de Guerra', 'Pele de Animal', 'Totém Tribal', 'Colar de Dentes'],
+    skills: ['Atletismo', 'Intimidação', 'Sobrevivência', 'Percepção']
+  },
+  {
+    id: 4,
+    name: 'Elandor',
+    class: 'Elfo da Floresta - Ladino',
+    race: 'Elfo',
+    description: 'Um elfo gracioso da floresta, mestre em stealth e combat.',
+    portrait: 'imagens/Elandor.jpeg',
+    attributes: {
+      str: 13,
+      dex: 17,
+      con: 13,
+      int: 16,
+      wis: 15,
+      cha: 12
+    },
+    equipment: ['Arco Élfico', 'Flechas Mágicas', 'Adaga Élfica', 'Capa Verde'],
+    skills: ['Furtividade', 'Percepção', 'Sobrevivência', 'Conhecimento da Natureza']
+  },
+  {
+    id: 5,
+    name: 'Valenhardt',
+    class: 'Paladino',
+    race: 'Humano',
+    description: 'Um paladino justo e honrado, dedicado à justiça e proteção dos inocentes.',
+    portrait: 'imagens/Valenhart.jpeg',
+    attributes: {
+      str: 17,
+      dex: 13,
+      con: 14,
+      int: 11,
+      wis: 18,
+      cha: 16
+    },
+    equipment: ['Espada Sagrada', 'Escudo Crusado', 'Armadura Divina', 'Símbolo Sagrado'],
+    skills: ['Intuição', 'Percepção', 'Religião', 'Medicina']
+  }
+];
+
+// Function to render characters list
+function renderCharactersList() {
+  const container = document.getElementById('characters-container');
+  if (!container) return;
+
+  container.innerHTML = '';
+
+  campaignCharacters.forEach((character) => {
+    const characterCard = document.createElement('div');
+    characterCard.classList.add('character-card');
+    characterCard.setAttribute('data-character-id', character.id);
+    
+    characterCard.innerHTML = `
+      <img src="${character.portrait}" alt="${character.name}">
+      <div class="character-card-info flex-1">
+        <h4>${character.name}</h4>
+        <p>${character.class}</p>
+      </div>
+    `;
+
+    characterCard.addEventListener('click', () => {
+      // Remove active class from all cards
+      document.querySelectorAll('.character-card').forEach(card => {
+        card.classList.remove('active');
+      });
+
+      // Add active class to clicked card
+      characterCard.classList.add('active');
+
+      // Display character details
+      displayCharacterDetails(character);
+    });
+
+    container.appendChild(characterCard);
+  });
+
+  // Auto-select first character
+  if (campaignCharacters.length > 0) {
+    displayCharacterDetails(campaignCharacters[0]);
+    const firstCard = document.querySelector('[data-character-id="1"]');
+    if (firstCard) firstCard.classList.add('active');
+  }
+}
+
+// Function to display character details
+function displayCharacterDetails(character) {
+  const detailContent = document.getElementById('character-detail-content');
+  if (!detailContent) return;
+
+  detailContent.innerHTML = `
+    <div class="character-detail-wrapper">
+      <div class="character-portrait-container">
+        <img src="${character.portrait}" alt="${character.name}" class="character-portrait">
+      </div>
+    </div>
+  `;
+}
+
+// Initialize campaign section when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+  renderCharactersList();
+});
+
 

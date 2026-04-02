@@ -11,7 +11,6 @@
      <link rel="icon" href="imagens/FIRE HOUSE WALLPAPER.png" sizes="32x32" type="image/png">
     <link rel="icon" href="imagens/FIRE HOUSE WALLPAPER.png" type="image/svg+xml">
     <link rel="apple-touch-icon" href="imagens/FIRE HOUSE WALLPAPER.png" sizes="180x180">
-    <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#f97316">
 
     <link rel="stylesheet" href="style.css">
@@ -52,11 +51,29 @@
     <!-- Resto do conteúdo com z-index maior -->
     <div class="relative z-10">
 
-    <!-- Botão de instalar PWA -->
-    <div id="pwa-install-container" style="display:none;" class="fixed top-4 right-4 z-50">
-        <button id="pwa-install-btn" class="px-4 py-2 bg-fire-600 hover:bg-fire-700 text-white font-bold rounded shadow-lg">
-            Instalar app 🔥
-        </button>
+    <!-- Redes Sociais Flutuante -->
+    <div class="fixed top-4 right-4 z-50 bg-black/80 backdrop-blur rounded-lg p-4 border border-fire-600/50">
+        <p class="text-fire-400 text-sm font-bold mb-3 text-center">NOS ACOMPANHE</p>
+        <div class="flex gap-4">
+            <a href="https://www.instagram.com/firehouseclub042" target="_blank" rel="noopener" aria-label="Instagram" class="flex flex-col items-center justify-center hover:scale-110 transition transform">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white mb-1" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
+                </svg>
+                <span class="text-xs text-fire-400">Instagram</span>
+            </a>
+            <a href="https://www.youtube.com/@FireHouseClubPR" target="_blank" rel="noopener" aria-label="YouTube" class="flex flex-col items-center justify-center hover:scale-110 transition transform">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white mb-1" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+                <span class="text-xs text-fire-400">YouTube</span>
+            </a>
+            <a href="https://www.tiktok.com/@firehouseclub" target="_blank" rel="noopener" aria-label="TikTok" class="flex flex-col items-center justify-center hover:scale-110 transition transform">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white mb-1" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.68v13.67a2.89 2.89 0 0 1-5.08 1.5A2.89 2.89 0 0 1 8.95 9.75a2.87 2.87 0 0 1 5.03.78v-3.72a6.33 6.33 0 0 0-5.03-2.33A6.34 6.34 0 0 0 2.89 9.75a6.34 6.34 0 0 0 10.86 4.43v-4.56c2.16 1.58 5.02 1.91 6.84.55z"/>
+                </svg>
+                <span class="text-xs text-fire-400">TikTok</span>
+            </a>
+        </div>
     </div>
 
     <!-- Navbar Component -->
@@ -108,29 +125,56 @@
 
 
             
-           <div class="mt-6 flex justify-center gap-6 items-center">
-                <a href="https://www.instagram.com/firehouseclub042" target="_blank" rel="noopener" aria-label="Instagram" class="flex items-center justify-center p-2 rounded-full hover:bg-fire-900/20 transition transform hover:scale-110">
-                    <!-- Instagram SVG -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-fire-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                        <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.5A4.5 4.5 0 1 0 16.5 13 4.5 4.5 0 0 0 12 8.5zm6.2-2.7a1.05 1.05 0 1 0 1.05 1.05A1.05 1.05 0 0 0 18.2 5.8zM12 10.5A1.5 1.5 0 1 1 10.5 12 1.5 1.5 0 0 1 12 10.5z"/>
-                    </svg>
-                </a>
-
-                <a href="https://www.youtube.com/@FireHouseClubPR" target="_blank" rel="noopener" aria-label="YouTube" class="flex items-center justify-center p-2 rounded-full hover:bg-fire-900/20 transition transform hover:scale-110">
-                    <!-- YouTube SVG -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-fire-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                        <path d="M23.498 6.186a2.99 2.99 0 0 0-2.105-2.111C19.55 3.5 12 3.5 12 3.5s-7.55 0-9.393.575A2.99 2.99 0 0 0 .5 6.186 31.27 31.27 0 0 0 0 12a31.27 31.27 0 0 0 .5 5.814 2.99 2.99 0 0 0 2.107 2.111C4.45 20.5 12 20.5 12 20.5s7.55 0 9.393-.575a2.99 2.99 0 0 0 2.105-2.111A31.27 31.27 0 0 0 24 12a31.27 31.27 0 0 0-.502-5.814zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/>
-                    </svg>
-                </a>
-            </div>
-
+           
         <div class="absolute bottom-10 left-0 right-0 text-center animate-bounce">
             <a href="#about" class="text-fire-400 hover:text-fire-300">
                 <i data-feather="chevron-down" class="w-8 h-8"></i>
             </a>
         </div>
     </section>
-    <section id="highlights" class="py-20 bg-gradient-to-b from-black to-gray-900">
+   
+
+    <!-- Campaign Section -->
+    <section id="campaign" class="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center section-title">
+                <span class="text-fire-500">SEÇÃO DE CAMPANHA ATUAL</span> <span class="text-fire-300 font-rpg italic text-2xl">*As Crônicas do Faerun*</span>
+            </h2>
+
+            <div class="campaign-container border-2 border-fire-500 rounded-lg p-8 bg-black/40 backdrop-blur">
+                <div class="campaign-grid grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    
+                    <!-- Left Panel: Characters List -->
+                    <div class="campaign-left">
+                        <h3 class="text-2xl font-bold text-fire-400 mb-6 border-b-2 border-fire-600 pb-3">Personagens</h3>
+                        <div id="characters-container" class="space-y-3 mb-6">
+                            <!-- Characters will be dynamically added here -->
+                        </div>
+
+                        <!-- Campaign Description -->
+                        <div class="campaign-description-box border-2 border-fire-600 rounded p-4 bg-black/60">
+                            <h4 class="text-fire-400 font-bold mb-3 text-sm">Descrição da Campanha</h4>
+                            <p class="text-gray-300 text-sm leading-relaxed max-h-48 overflow-y-auto">
+                                A campanha atual adiça no pique: o grupo Invasor e Valestor do Ashtel para o resgate a Riiasteste do Fogo sobre que o culto rival conduz o ritual. A cada sessão, intrigas mais fortes e escolhas do risco médio o destino das hordas. Obriste: fazer a renda eliminada, demitir a Questão: St Magnus e envogar com a religião.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right Panel: Character Details -->
+                    <div class="campaign-right border-2 border-fire-600 rounded bg-black/80">
+                        <div id="character-detail-content">
+                            <!-- Character details will be loaded here -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    
+     <section id="highlights" class="py-20 bg-gradient-to-b from-black to-gray-900">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center section-title">
                 <span class="text-fire-500">MELHORES</span> MOMENTOS
@@ -216,50 +260,6 @@
                 <a href="https://kick.com/firehouseclub" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 bg-fire-600 hover:bg-fire-700 text-white font-bold rounded-full transition-all shadow-lg">
                     <i data-feather="youtube" class="w-5 h-5"></i> Ver canal completo
                 </a>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-gradient-to-b from-gray-900 to-black">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center section-title">
-                <span class="text-fire-500">SOBRE A</span> FIREHOUSE
-            </h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-gray-800 rounded-lg p-6 hover:shadow-lg hover:shadow-fire-500/20 transition-all">
-                    <div class="text-center mb-4">
-                        <div class="inline-block p-3 bg-fire-900 rounded-full">
-                            <i data-feather="users" class="w-8 h-8 text-fire-400"></i>
-                        </div>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 text-center text-fire-400">Nossa História</h3>
-                    <p class="text-gray-300">Nós somos o Fire House Club, um grupo de amigos do interior do Paraná que resolveu transformar as nossas jogatinas de RPG cheias de besteiras, risadas, cervejas, cigarros e decisões ruins, em live.
-Aqui a gente compartilha as mesmas merdas que fazia jogando off, mas agora com testemunha.
-Seja bem-vindo ao boteco do caos, onde o dado rola torto e a cerveja nunca acaba! 🎲🍺🔥.</p>
-                </div>
-                
-                <div class="bg-gray-800 rounded-lg p-6 hover:shadow-lg hover:shadow-fire-500/20 transition-all">
-                    <div class="text-center mb-4">
-                        <div class="inline-block p-3 bg-fire-900 rounded-full">
-                            <i data-feather="target" class="w-8 h-8 text-fire-400"></i>
-                        </div>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 text-center text-fire-400">Nossa Missão</h3>
-                    <p class="text-gray-300">Espalhar o caos, a risada e o amor pelo RPG! Nosso propósito é transformar cada jogatina em uma história absurda, cada erro crítico em motivo de brinde e cada sessão em um lembrete de que jogar é se divertir — mesmo (ou principalmente) quando tudo dá errado. Queremos que todo mundo sinta que tá na mesa com a gente: rindo, errando e brindando ao improviso. 🎲🍻</p>
-                </div>
-                
-                <div class="bg-gray-800 rounded-lg p-6 hover:shadow-lg hover:shadow-fire-500/20 transition-all">
-                    <div class="text-center mb-4">
-                        <div class="inline-block p-3 bg-fire-900 rounded-full">
-                            <i data-feather="award" class="w-8 h-8 text-fire-400"></i>
-                        </div>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 text-center text-fire-400">Nossos Valores</h3>
-                    <p class="text-gray-300">o Fire House Club, acreditamos que o verdadeiro espírito do RPG está no caos, na amizade e na risada. Somos um grupo de amigos que valoriza a bagunça criativa, o improviso e a liberdade de jogar do nosso jeito — sem filtro, sem pose, só diversão. Aqui o dado rola torto, a cerveja nunca acaba e cada erro vira história. Nosso boteco é aberto pra quem quiser entrar, rir, jogar e viver o caos com a gente 🎲🍺🔥.</p>
-                </div>
             </div>
         </div>
     </section>
@@ -452,6 +452,53 @@ Seja bem-vindo ao boteco do caos, onde o dado rola torto e a cerveja nunca acaba
                     </div>
                 </div>
             </div>
+
+            <div class="text-center mt-16">
+                <a href="#live" class="inline-block px-8 py-3 bg-fire-600 hover:bg-fire-700 text-white font-bold rounded-full transition-all transform hover:scale-105 shadow-lg shadow-fire-900/50">
+                    <i data-feather="play" class="inline mr-2"></i> VER PRÓXIMO EPISÓDIO
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center section-title">
+                <span class="text-fire-500">SOBRE A</span> FIREHOUSE
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 rounded-lg p-6 hover:shadow-lg hover:shadow-fire-500/20 transition-all">
+                    <div class="text-center mb-4">
+                        <div class="inline-block p-3 bg-fire-900 rounded-full">
+                            <i data-feather="users" class="w-8 h-8 text-fire-400"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center text-fire-400">Nossa História</h3>
+                    <p class="text-gray-300">Nós somos o Fire House Club, um grupo de amigos do interior do Paraná que resolveu transformar as nossas jogatinas de RPG cheias de besteiras, risadas, cervejas, cigarros e decisões ruins, em live.
+Aqui a gente compartilha as mesmas merdas que fazia jogando off, mas agora com testemunha.
+Seja bem-vindo ao boteco do caos, onde o dado rola torto e a cerveja nunca acaba! 🎲🍺🔥.</p>
+                </div>
+                
+                <div class="bg-gray-800 rounded-lg p-6 hover:shadow-lg hover:shadow-fire-500/20 transition-all">
+                    <div class="text-center mb-4">
+                        <div class="inline-block p-3 bg-fire-900 rounded-full">
+                            <i data-feather="target" class="w-8 h-8 text-fire-400"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center text-fire-400">Nossa Missão</h3>
+                    <p class="text-gray-300">Espalhar o caos, a risada e o amor pelo RPG! Nosso propósito é transformar cada jogatina em uma história absurda, cada erro crítico em motivo de brinde e cada sessão em um lembrete de que jogar é se divertir — mesmo (ou principalmente) quando tudo dá errado. Queremos que todo mundo sinta que tá na mesa com a gente: rindo, errando e brindando ao improviso. 🎲🍻</p>
+                </div>
+                
+                <div class="bg-gray-800 rounded-lg p-6 hover:shadow-lg hover:shadow-fire-500/20 transition-all">
+                    <div class="text-center mb-4">
+                        <div class="inline-block p-3 bg-fire-900 rounded-full">
+                            <i data-feather="award" class="w-8 h-8 text-fire-400"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center text-fire-400">Nossos Valores</h3>
+                    <p class="text-gray-300">o Fire House Club, acreditamos que o verdadeiro espírito do RPG está no caos, na amizade e na risada. Somos um grupo de amigos que valoriza a bagunça criativa, o improviso e a liberdade de jogar do nosso jeito — sem filtro, sem pose, só diversão. Aqui o dado rola torto, a cerveja nunca acaba e cada erro vira história. Nosso boteco é aberto pra quem quiser entrar, rir, jogar e viver o caos com a gente 🎲🍺🔥.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -579,7 +626,9 @@ O Norte não perdoa erros duas vezes.</p>
                 <!-- YouTube Card -->
                 <a href="https://www.youtube.com/@FireHouseClubPR" class="social-card bg-black/50 rounded-lg p-6 text-center transform hover:scale-105 transition-all border border-fire-700/30 hover:border-fire-500">
                     <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-fire-600/20 flex items-center justify-center">
-                        <i data-feather="youtube" class="w-8 h-8 text-fire-500"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
                     </div>
                     <h3 class="text-xl font-bold mb-2 text-fire-400">YouTube</h3>
                     <p class="text-fire-200 text-sm">Assista nossas aventuras completas</p>
@@ -588,10 +637,23 @@ O Norte não perdoa erros duas vezes.</p>
                 <!-- Instagram Card -->
                 <a href="https://www.instagram.com/firehouseclub042" class="social-card bg-black/50 rounded-lg p-6 text-center transform hover:scale-105 transition-all border border-fire-700/30 hover:border-fire-500">
                     <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-fire-600/20 flex items-center justify-center">
-                        <i data-feather="instagram" class="w-8 h-8 text-fire-500"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
+                        </svg>
                     </div>
                     <h3 class="text-xl font-bold mb-2 text-fire-400">Instagram</h3>
                     <p class="text-fire-200 text-sm">Fique por dentro das novidades</p>
+                </a>
+
+                <!-- TikTok Card -->
+                <a href="https://www.tiktok.com/@firehouseclub" class="social-card bg-black/50 rounded-lg p-6 text-center transform hover:scale-105 transition-all border border-fire-700/30 hover:border-fire-500">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-fire-600/20 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.68v13.67a2.89 2.89 0 0 1-5.08 1.5A2.89 2.89 0 0 1 8.95 9.75a2.87 2.87 0 0 1 5.03.78v-3.72a6.33 6.33 0 0 0-5.03-2.33A6.34 6.34 0 0 0 2.89 9.75a6.34 6.34 0 0 0 10.86 4.43v-4.56c2.16 1.58 5.02 1.91 6.84.55z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-fire-400">TikTok</h3>
+                    <p class="text-fire-200 text-sm">Clips, trends e momentos épicos</p>
                 </a>
 
                 <!-- Kick Card -->
@@ -603,7 +665,7 @@ O Norte não perdoa erros duas vezes.</p>
                     <p class="text-fire-200 text-sm">Lives toda sexta às 20h</p>
                 </a>
 
-                <!-- Twitch Card -->
+                <!-- Discord Card -->
                 <a href="https://discord.gg/hXFpfRjwwV" class="social-card bg-black/50 rounded-lg p-6 text-center transform hover:scale-105 transition-all border border-fire-700/30 hover:border-fire-500">
                     <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-fire-600/20 flex items-center justify-center">
                         <!-- Troca do ícone twitch para message-circle (ícone do Discord) -->
