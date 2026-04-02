@@ -303,3 +303,251 @@ section {
     }
 }
 
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    /* Section Spacing - Reduz significativamente para mobile */
+    section {
+        padding-top: 32px !important;
+        padding-bottom: 32px !important;
+    }
+
+    /* Hero Section */
+    .relative.h-screen {
+        min-height: 100vh;
+    }
+
+    /* Titles and Text */
+    h1 {
+        font-size: 1.75rem !important;
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+    }
+
+    h3 {
+        font-size: 1.1rem !important;
+    }
+
+    p {
+        font-size: 0.875rem !important;
+    }
+
+    /* Hero Content */
+    .text-5xl {
+        font-size: 1.875rem;
+    }
+
+    .text-7xl {
+        font-size: 1.875rem;
+    }
+
+    .text-xl {
+        font-size: 0.875rem;
+    }
+
+    .text-2xl {
+        font-size: 1rem;
+    }
+
+    .text-3xl {
+        font-size: 1.25rem;
+    }
+
+    .text-4xl {
+        font-size: 1.25rem;
+    }
+
+    /* Countdown */
+    #countdown .text-3xl {
+        font-size: 1.5rem;
+    }
+
+    #countdown .text-sm {
+        font-size: 0.7rem;
+    }
+
+    #countdown {
+        padding: 12px !important;
+        gap: 8px !important;
+    }
+
+    .countdown-item {
+        gap: 2px !important;
+    }
+
+    /* Buttons */
+    button, a.inline-block {
+        padding: 8px 16px !important;
+        font-size: 0.8rem;
+    }
+
+    /* Padding reduções */
+    .px-4 { padding-left: 12px; padding-right: 12px; }
+    .px-6 { padding-left: 16px; padding-right: 16px; }
+    .px-8 { padding-left: 16px; padding-right: 16px; }
+    .py-3 { padding-top: 8px; padding-bottom: 8px; }
+    .py-4 { padding-top: 12px; padding-bottom: 12px; }
+    .py-6 { padding-top: 16px; padding-bottom: 16px; }
+    .py-8 { padding-top: 16px; padding-bottom: 16px; }
+    .py-20 { padding-top: 32px; padding-bottom: 32px; }
+
+    .p-4 { padding: 8px; }
+    .p-6 { padding: 12px; }
+    .p-8 { padding: 12px; }
+
+    /* Margin reduções */
+    .mb-2 { margin-bottom: 4px; }
+    .mb-3 { margin-bottom: 6px; }
+    .mb-4 { margin-bottom: 8px; }
+    .mb-6 { margin-bottom: 12px; }
+    .mb-8 { margin-bottom: 16px; }
+    .mb-12 { margin-bottom: 24px; }
+
+    /* Grid e Flex */
+    .gap-2 { gap: 4px; }
+    .gap-3 { gap: 6px; }
+    .gap-4 { gap: 8px; }
+    .gap-6 { gap: 12px; }
+
+    /* Campaign Section */
+    .campaign-container {
+        padding: 12px !important;
+    }
+
+    .campaign-grid {
+        gap: 12px !important;
+    }
+
+    .character-card {
+        padding: 8px 10px !important;
+        gap: 8px !important;
+    }
+
+    .character-card img {
+        width: 48px !important;
+        height: 48px !important;
+    }
+
+    .character-card-info h4 {
+        font-size: 13px !important;
+    }
+
+    .character-card-info p {
+        font-size: 11px !important;
+    }
+
+    /* Member Cards Grid */
+    .grid.grid-cols-1.md\\:grid-cols-2.lg\\:grid-cols-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .member-card {
+        border-radius: 8px;
+    }
+
+    .member-card .relative.h-64 {
+        height: 120px !important;
+    }
+
+    .member-card h3 {
+        font-size: 0.95rem !important;
+    }
+
+    .member-card p {
+        font-size: 0.75rem !important;
+    }
+
+    /* Social Media Cards */
+    .social-card {
+        padding: 12px !important;
+    }
+
+    .social-card .w-16 {
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    .social-card .w-8 {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .social-card h3 {
+        font-size: 1rem !important;
+    }
+
+    .social-card p {
+        font-size: 0.75rem !important;
+    }
+
+    /* Navbar */
+    .text-lg { font-size: 0.9rem; }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    /* Icons */
+    [data-feather] {
+        width: 18px;
+        height: 18px;
+    }
+
+    .w-12 {
+        width: 24px !important;
+        height: 24px !important;
+    }
+
+    /* Video aspect ratio */
+    .aspect-video {
+        height: 150px;
+    }
+
+    /* Section Title */
+    .section-title {
+        padding-bottom: 6px;
+    }
+
+    .section-title::after {
+        width: 60px;
+        height: 2px;
+    }
+
+    /* Container */
+    .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    /* Hero section social icons */
+    .mt-6.flex {
+        gap: 12px !important;
+    }
+
+    .rounded-full.hover\\:bg-fire-900\\/20 {
+        padding: 6px !important;
+    }
+
+    .w-12.h-12 {
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    /* Desktop elements hidden on mobile for cleaner view */
+    .desktop-only {
+        display: none;
+    }
+
+    /* Campaign Description and Character Attributes */
+    .character-attributes {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 6px !important;
+    }
+
+    .campaign-description-box {
+        max-height: 200px;
+    }
+}
+
