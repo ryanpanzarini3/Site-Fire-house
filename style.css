@@ -363,6 +363,29 @@ section {
     }
 
     /* Hero Section */
+    .relative.min-h-screen {
+        min-height: 100vh;
+    }
+
+    /* Ajustar vídeo para mobile */
+    .absolute.inset-0.overflow-hidden video {
+        width: 120% !important;
+        height: 120% !important;
+        object-fit: cover;
+        object-position: center;
+        left: -10% !important;
+        top: -10% !important;
+    }
+
+    /* Aumentar zoom do vídeo em mobile extra pequeno */
+    @media (max-width: 480px) {
+        .absolute.inset-0.overflow-hidden video {
+            width: 130% !important;
+            height: 130% !important;
+            left: -15% !important;
+            top: -15% !important;
+        }
+    }
     .relative.h-screen {
         min-height: 100vh;
     }
