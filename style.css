@@ -367,20 +367,12 @@ section {
         min-height: 100vh;
     }
 
-    /* Ajustar vídeo para mobile - diminuir zoom */
+    /* Ajustar vídeo para mobile - preencher a tela sem zoom */
     .absolute.inset-0.overflow-hidden video {
         width: 100% !important;
         height: 100% !important;
         object-fit: cover;
         object-position: center;
-        transform: scale(0.8);
-    }
-
-    /* Diminuir ainda mais em mobile extra pequeno */
-    @media (max-width: 480px) {
-        .absolute.inset-0.overflow-hidden video {
-            transform: scale(0.7);
-        }
     }
     .relative.h-screen {
         min-height: 100vh;
