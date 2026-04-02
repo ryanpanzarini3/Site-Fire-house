@@ -48,25 +48,74 @@ if ('serviceWorker' in navigator) {
 }
 function updateCountdown() {
     const now = new Date();
-    let nextFriday = new Date();
-
-    // Calcula a próxima sexta
-    const daysUntilFriday = (5 - now.getDay() + 7) % 7;
-    nextFriday.setDate(now.getDate() + daysUntilFriday);
-
-    // 👉 PULA essa sexta e vai para a outra
-    nextFriday.setDate(nextFriday.getDate() + 7);
-
-    // Horário do evento
-    nextFriday.setHours(20, 0, 0, 0);
-
-    const diff = nextFriday - now;
-
+    const currentDay = now.getDay();
+    const currentHour = now.getHours();
+    const currentMinute = now.getMinutes();
+    
+    // Verificar se está "ONLINE AGORA" (sexta 20h até sábado 1h)
+    let isOnline = false;
+    if (currentDay === 5 && currentHour >= 20) { // Sexta a partir das 20h
+        isOnline = true;
+    } else if (currentDay === 6 && currentHour < 1) { // Sábado antes da 1h da manhã
+        isOnline = true;
+    }
+    
+    if (isOnline) {
+        // Mostrar "ONLINE AGORA"
+        const countdownDiv = document.getElementById('countdown');
+        if (countdownDiv) {
+            countdownDiv.innerHTML = `
+                <p class="text-fire-400 mb-2" style="font-size: 1.25rem; font-weight: bold; text-align: center;">🔴 ONLINE AGORA!</p>
+            `;
+        }
+        return;
+    }
+    
+    // Calcular próxima sessão (a cada 14 dias, sempre sexta às 20h)
+    let nextSessionDate = new Date(now);
+    
+    // Encontrar a próxima sexta
+    let daysToFriday = (5 - now.getDay() + 7) % 7;
+    if (daysToFriday === 0 && currentHour >= 20) {
+        // Se é sexta e já passou das 20h, próxima é daqui 14 dias
+        daysToFriday = 14;
+    }
+    
+    nextSessionDate.setDate(nextSessionDate.getDate() + daysToFriday);
+    nextSessionDate.setHours(20, 0, 0, 0);
+    
+    // Data de referência: primeira sessão (11 de abril de 2026)
+    // A partir dessa data, sessões são a cada 14 dias
+    const firstSessionDate = new Date(2026, 3, 11, 20, 0, 0, 0); // 11 de abril de 2026
+    
+    // Calcular quantas semanas (de 14 dias) passaram desde a primeira sessão
+    const timeDiff = nextSessionDate - firstSessionDate;
+    const weeksPassed = Math.round(timeDiff / (14 * 24 * 60 * 60 * 1000));
+    
+    // Se o número de "ciclos de 14 dias" não é exato, significa que caímos numa sexta de "pulo"
+    // Então pulamos para 14 dias depois
+    if (weeksPassed % 1 !== 0 || timeDiff < 0) {
+        // Não é uma sexta de sessão, pula para a próxima
+        nextSessionDate.setDate(nextSessionDate.getDate() + 14);
+    }
+    
+    // Verificar se seria uma sexta de sessão (número par de ciclos desde a referência)
+    const futureTimeDiff = nextSessionDate - firstSessionDate;
+    const futureCycles = Math.round(futureTimeDiff / (14 * 24 * 60 * 60 * 1000));
+    
+    if (futureCycles % 2 !== 0) {
+        // Não é uma sexta de sessão par, pula mais 7 dias
+        nextSessionDate.setDate(nextSessionDate.getDate() + 7);
+    }
+    
+    // Calcular diferença de tempo
+    const diff = nextSessionDate - now;
+    
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
     const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
+    
     document.getElementById('days').textContent = String(days).padStart(2, '0');
     document.getElementById('hours').textContent = String(hours).padStart(2, '0');
     document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
