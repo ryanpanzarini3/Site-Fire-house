@@ -367,23 +367,19 @@ section {
         min-height: 100vh;
     }
 
-    /* Ajustar vídeo para mobile */
+    /* Ajustar vídeo para mobile - diminuir zoom */
     .absolute.inset-0.overflow-hidden video {
-        width: 120% !important;
-        height: 120% !important;
+        width: 100% !important;
+        height: 100% !important;
         object-fit: cover;
         object-position: center;
-        left: -10% !important;
-        top: -10% !important;
+        transform: scale(0.8);
     }
 
-    /* Aumentar zoom do vídeo em mobile extra pequeno */
+    /* Diminuir ainda mais em mobile extra pequeno */
     @media (max-width: 480px) {
         .absolute.inset-0.overflow-hidden video {
-            width: 130% !important;
-            height: 130% !important;
-            left: -15% !important;
-            top: -15% !important;
+            transform: scale(0.7);
         }
     }
     .relative.h-screen {
