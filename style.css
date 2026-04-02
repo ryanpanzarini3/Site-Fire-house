@@ -166,6 +166,57 @@ section {
 }
 
 /* Campaign Section Styles */
+#campaign {
+    position: relative;
+    background-image: url('imagens/WhatsApp\ Image\ 2026-04-01\ at\ 19.04.00.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#campaign::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    pointer-events: none;
+    z-index: 1;
+}
+
+#campaign > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Background infinito para outras seções */
+#highlights, #about, #systems, #live, #members, #dice-roller {
+    position: relative;
+    background-image: url('imagens/WhatsApp\ Image\ 2026-04-01\ at\ 19.04.00.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#highlights::before, #about::before, #systems::before, #live::before, #members::before, #dice-roller::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    pointer-events: none;
+    z-index: 1;
+}
+
+#highlights > *, #about > *, #systems > *, #live > *, #members > *, #dice-roller > * {
+    position: relative;
+    z-index: 2;
+}
+
 .campaign-container {
     position: relative;
     box-shadow: 0 0 40px rgba(234, 88, 12, 0.2);
